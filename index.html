@@ -16,125 +16,101 @@
 
   <!-- HERO -->
   <header class="hero fade-in section-shadow">
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <video class="bg-blur" src="assets/hero.webm" autoplay muted loop playsinline></video>
     <video class="main" src="assets/hero.webm" autoplay muted loop playsinline></video>
     <div class="light"></div>
     <div class="overlay">
       <h1>Viktoriia</h1>
-      <p class="subtitle">visual creator from Saint&nbsp;Petersburg</p>
+      <p class="subtitle" data-i18n="hero_subtitle"></p>
       <div class="scroll-down">scroll ↓</div>
     </div>
   </header>
 
   <!-- ABOUT -->
   <section class="about fade-in section-shadow">
-    <h2>Обо мне</h2>
-    <p>
-      Привет, я Виктория. Я создаю визуальные истории — фото и видео, в которых есть свет, движение и чувство реальности.
-      Люблю наблюдать за людьми, за тем, как меняется свет, и ловить моменты, которые обычно проходят мимо.
-      Мой стиль — спокойный, минималистичный, честный.
-    </p>
+    <h2 data-i18n="about_title"></h2>
+    <p data-i18n="about_text"></p>
   </section>
 
   <!-- WHAT I DO -->
   <section class="whatido fade-in section-shadow">
-    <h2>Что я делаю</h2>
+    <h2 data-i18n="services_title"></h2>
     <div class="services">
       <article class="service">
         <div class="ico">📸</div>
-        <h3>Фото и видео для брендов</h3>
-        <p>Контент для соцсетей и кампаний — естественный свет, простая композиция, настоящие эмоции.</p>
+        <h3 data-i18n="service1_title"></h3>
+        <p data-i18n="service1_text"></p>
       </article>
       <article class="service">
         <div class="ico">🤝</div>
-        <h3>Сотрудничества</h3>
-        <p>Создаю коллаборации с брендами, близкими по эстетике и ценностям: уют, искренность, качество.</p>
+        <h3 data-i18n="service2_title"></h3>
+        <p data-i18n="service2_text"></p>
       </article>
     </div>
   </section>
 
   <!-- DAY IN MY LIFE -->
   <section class="daylife fade-in section-shadow">
-    <h2>Один мой день</h2>
+    <h2 data-i18n="daylife_title"></h2>
     <div class="timeline">
       <div class="moment">
         <video src="assets/morning.webm" autoplay muted loop playsinline></video>
-        <p>🌞 Утро. Кофе, наушники и свет в окне.</p>
+        <p data-i18n="moment1_text"></p>
       </div>
       <div class="moment">
         <video src="assets/gym.webm" autoplay muted loop playsinline></video>
-        <p>🏋️ Немного спорта — чтобы почувствовать тело и тишину внутри.</p>
+        <p data-i18n="moment2_text"></p>
       </div>
       <div class="moment">
         <video src="assets/walk.webm" autoplay muted loop playsinline></video>
-        <p>🕊 Город после дождя. Люблю, когда всё блестит и пахнет свежестью.</p>
+        <p data-i18n="moment3_text"></p>
       </div>
       <div class="moment">
         <video src="assets/night.webm" autoplay muted loop playsinline></video>
-        <p>🌆 Ночь — время вдохновения и честных мыслей.</p>
+        <p data-i18n="moment4_text"></p>
       </div>
     </div>
   </section>
 
   <!-- MOODBOARD -->
   <section class="moodboard fade-in section-shadow">
-    <h2>Moodboard</h2>
-    <p class="subtitle">вещи, которые делают мой день</p>
-
+    <h2 data-i18n="moodboard_title"></h2>
+    <p class="subtitle" data-i18n="moodboard_subtitle"></p>
     <div class="moods">
-      <div class="mood">
-        <img src="assets/book.webp" alt="Книга"/>
-        <p>📖 Тихие утренние страницы и кофе.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/icecream.webp" alt="Мороженое"/>
-        <p>🍦 Сладкое после длинного дня — просто потому что можно.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/movie.webp" alt="Фильм"/>
-        <p>🎬 Люблю хорошие фильмы и моменты, когда можно просто смотреть.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/restaurant.webp" alt="Ресторан"/>
-        <p>🕯 Уютные места, где не нужно говорить громко.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/nails.webp" alt="Маникюр"/>
-        <p>💅 Красный цвет — мой маленький способ сказать «я здесь».</p>
-      </div>
-      <div class="mood">
-        <img src="assets/mirror.webp" alt="Зеркало"/>
-        <p>🪞 Отражения. Всегда вижу в них что-то новое.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/work.webp" alt="Работа"/>
-        <p>☕ Работаю там, где спокойно и светло.</p>
-      </div>
-      <div class="mood">
-        <img src="assets/sunset.webp" alt="Закат"/>
-        <p>🌇 Закаты — мой способ поставить точку дню.</p>
-      </div>
+      <div class="mood"><img src="assets/book.webp"><p data-i18n="mood1_text"></p></div>
+      <div class="mood"><img src="assets/icecream.webp"><p data-i18n="mood2_text"></p></div>
+      <div class="mood"><img src="assets/movie.webp"><p data-i18n="mood3_text"></p></div>
+      <div class="mood"><img src="assets/restaurant.webp"><p data-i18n="mood4_text"></p></div>
+      <div class="mood"><img src="assets/nails.webp"><p data-i18n="mood5_text"></p></div>
+      <div class="mood"><img src="assets/mirror.webp"><p data-i18n="mood6_text"></p></div>
+      <div class="mood"><img src="assets/work.webp"><p data-i18n="mood7_text"></p></div>
+      <div class="mood"><img src="assets/sunset.webp"><p data-i18n="mood8_text"></p></div>
     </div>
   </section>
 
   <!-- THINGS I LOVE -->
-  <section class="things fade-in section-shadow">
-    <h2>Маленькие радости</h2>
-    <ul class="chips">
-      <li class="chip">☕ Утренний латте</li>
-      <li class="chip">🌧 Дождь за окном</li>
-      <li class="chip">✨ Тёплый свет на стене</li>
-      <li class="chip">📷 Чувственные фото</li>
-      <li class="chip">🕯 Аромат ванили</li>
-      <li class="chip">🌇 Оранжевое небо</li>
-      <li class="chip">🎧 Музыка в наушниках</li>
-      <li class="chip">🪞 Счастливая я в зеркале</li>
-    </ul>
-  </section>
+<section class="things fade-in section-shadow">
+  <h2 data-i18n="things_title"></h2>
+  <ul class="chips">
+    <li class="chip" data-i18n="chip1"></li>
+    <li class="chip" data-i18n="chip2"></li>
+    <li class="chip" data-i18n="chip3"></li>
+    <li class="chip" data-i18n="chip4"></li>
+    <li class="chip" data-i18n="chip5"></li>
+    <li class="chip" data-i18n="chip6"></li>
+    <li class="chip" data-i18n="chip7"></li>
+    <li class="chip" data-i18n="chip8"></li>
+  </ul>
+</section>
+
 
   <!-- CONTACTS -->
   <section class="links fade-in section-shadow">
-    <h2>Контакты</h2>
+    <h2 data-i18n="contact_title"></h2>
     <a href="https://t.me/viktoriurr" target="_blank" class="btn telegram">Telegram</a>
     <a href="https://instagram.com/viktoroum" target="_blank" class="btn instagram">Instagram</a>
     <a href="https://tiktok.com/@viktoriumr" target="_blank" class="btn tiktok">TikTok</a>
@@ -142,20 +118,18 @@
 
   <!-- CONNECTION -->
   <section class="links connection fade-in section-shadow">
-    <h2>Связаться</h2>
+    <h2 data-i18n="connect_title"></h2>
     <a href="https://t.me/victoriumy" target="_blank" class="btn telegram">@victoriumy</a>
     <a href="mailto:viktoriumpr@gmail.com" class="btn telegram">✉️ viktoriumpr@gmail.com</a>
   </section>
 
   <!-- FOOTER -->
   <footer class="fade-in">
-    <p>Made with calm & light</p>
-    <p class="mini">© 2025 Viktoriia</p>
+    <p data-i18n="footer_text"></p>
+    <p class="mini" data-i18n="footer_copy"></p>
   </footer>
 
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="">
-  </div>
+  <div class="lightbox" id="lightbox"><img src="" alt=""></div>
 
   <script src="script.js"></script>
 </body>
