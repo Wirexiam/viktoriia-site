@@ -80,3 +80,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeBtn = document.querySelector(`.lang-btn[data-lang="${current}"]`);
   if (activeBtn) activeBtn.classList.add('active');
 });
+
+
+// ==== THEME TOGGLE ====
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+  themeToggle.textContent = '🌞';
+}
+
+themeToggle.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-theme');
+  themeToggle.textContent = isDark ? '🌞' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// ==== QUOTE OF THE DAY (multi-language) ====
+async function loadQuote() {
+  const res = await fetch('quotes.json');
+  const quotes = await res.json();
+
+  const lang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
+  const saved = localStorage.getItem('quoteOfDay');
+  const savedDate = localStorage.getItem('quoteDate');
+  const today = new Date().toISOString().slice(0,10);
+
+  let index;
+  if (saved && savedDate === today) {
+    index = parseInt(saved);
+  } else {
+    index = Math.floor(Math.random() * quotes.length);
+    localStorage.setItem('quoteOfDay', index);
+    localStorage.setItem('quoteDate', today);
+  }
+
+  const q = quotes[index][lang] || quotes[index]['en'];
+  const quoteText = document.getElementById('quote-text');
+  const quoteAuthor = document.getElementById('quote-author');
+
+  quoteText.textContent = `“${q.text}”`;
+  quoteAuthor.textContent = q.author ? `— ${q.author}` : '';
+
+  // плавное появление
+  const quoteSection = document.querySelector('.quote');
+  setTimeout(() => quoteSection.classList.add('visible'), 200);
+}
+
+document.addEventListener('DOMContentLoaded', loadQuote);
+
+// при смене языка обновляем цитату
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setTimeout(loadQuote, 200));
+});

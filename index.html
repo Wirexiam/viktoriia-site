@@ -14,12 +14,15 @@
 </head>
 <body>
 
+  <!-- Панель языков и темы (вынесена наверх, чтобы не исчезала при скролле) -->
+  <div class="lang-switch">
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+  </div>
+
   <!-- HERO -->
   <header class="hero fade-in section-shadow">
-    <div class="lang-switch">
-      <button class="lang-btn" data-lang="ru">RU</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-    </div>
     <video class="bg-blur" src="assets/hero.webm" autoplay muted loop playsinline></video>
     <video class="main" src="assets/hero.webm" autoplay muted loop playsinline></video>
     <div class="light"></div>
@@ -107,6 +110,13 @@
   </ul>
 </section>
 
+<!-- QUOTE OF THE DAY -->
+<section class="quote fade-in section-shadow">
+  <h2 data-i18n="quote_title"></h2>
+  <blockquote id="quote-text">...</blockquote>
+  <p id="quote-author"></p>
+</section>
+
 
   <!-- CONTACTS -->
   <section class="links fade-in section-shadow">
@@ -122,7 +132,7 @@
     <a href="https://t.me/victoriumy" target="_blank" class="btn telegram">@victoriumy</a>
     <a href="mailto:viktoriumpr@gmail.com" class="btn telegram">✉️ viktoriumpr@gmail.com</a>
   </section>
-
+  
   <!-- FOOTER -->
   <footer class="fade-in">
     <p data-i18n="footer_text"></p>

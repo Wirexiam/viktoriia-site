@@ -35,7 +35,9 @@
     "contact_title": "Контакты",
     "connect_title": "Связаться",
     "footer_text": "Сделано со светом и спокойствием",
-    "footer_copy": "© 2025 Viktoriia"
+    "footer_copy": "© 2025 Viktoriia",
+    "quote_title": "Цитата дня"
+
   },
   "en": {
     "hero_subtitle": "visual creator from Saint Petersburg",
@@ -73,6 +75,7 @@
     "contact_title": "Contacts",
     "connect_title": "Get in touch",
     "footer_text": "Made with calm & light",
-    "footer_copy": "© 2025 Viktoriia"
+    "footer_copy": "© 2025 Viktoriia",
+    "quote_title": "Quote of the Day"
   }
 }

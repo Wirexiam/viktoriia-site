@@ -222,13 +222,37 @@ footer .mini { font-size:.85rem; color:#999; margin-top:6px; }
 }
 
 /* LANGUAGE SWITCH */
+/* ===== FIXED FLOATING CONTROL PANEL ===== */
 .lang-switch {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  z-index: 10;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 2000;
   display: flex;
   gap: 8px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 40px;
+  padding: 6px 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: background 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+
+/* эффект при наведении */
+.lang-switch:hover {
+  background: rgba(255, 255, 255, 0.55);
+  transform: translateY(-2px);
+}
+
+/* позиция в тёмной теме */
+body.dark-theme .lang-switch {
+  background: rgba(20, 20, 20, 0.6);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+body.dark-theme .lang-switch:hover {
+  background: rgba(30, 30, 30, 0.75);
 }
 
 .lang-btn {
@@ -264,5 +288,246 @@ footer .mini { font-size:.85rem; color:#999; margin-top:6px; }
   .lang-btn {
     padding: 5px 10px;
     font-size: 0.8rem;
+  }
+}
+
+/* THEME TOGGLE */
+#theme-toggle {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #222;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-1px);
+}
+
+/* DARK THEME — balanced soft mode */
+body.dark-theme {
+  background: #0e0e0e;
+  color: #e9e9e9;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Заголовки — чуть теплее */
+body.dark-theme h1,
+body.dark-theme h2 {
+  color: #f3f3f3;
+}
+
+/* Секции со светлым фоном → графитовые */
+body.dark-theme .whatido,
+body.dark-theme .daylife,
+body.dark-theme .things,
+body.dark-theme .links {
+  background: #151515;
+  color: #e8e8e8;
+}
+
+/* Карточки */
+body.dark-theme .service,
+body.dark-theme .mood {
+  background: #1a1a1a;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+body.dark-theme .mood p,
+body.dark-theme .service p {
+  background: transparent;
+}
+
+/* ABOUT текст */
+body.dark-theme .about {
+  color: #ddd;
+}
+
+/* Чипы */
+body.dark-theme .chip {
+  background: #1e1e1e;
+  border-color: #2a2a2a;
+  color: #f1f1f1;
+}
+body.dark-theme .chip:hover {
+  background: #2a2a2a;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.05);
+}
+
+/* Ссылки / кнопки */
+body.dark-theme .links.connection .btn {
+  background: transparent;
+  color: #eaeaea;
+  border-color: #444;
+}
+body.dark-theme .links.connection .btn:hover {
+  background: #eaeaea;
+  color: #111;
+}
+
+body.dark-theme .btn.telegram,
+body.dark-theme .btn.instagram,
+body.dark-theme .btn.tiktok {
+  filter: brightness(1.15);
+}
+
+/* Footer */
+body.dark-theme footer {
+  color: #aaa;
+}
+body.dark-theme footer .mini {
+  color: #666;
+}
+
+/* Тени между секциями — инвертировать направление */
+body.dark-theme .section-shadow::after {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(255,255,255,0));
+}
+
+/* Lang-switch и toggle */
+body.dark-theme .lang-btn,
+body.dark-theme #theme-toggle {
+  background: rgba(25,25,25,0.7);
+  border-color: rgba(255,255,255,0.2);
+  color: #eee;
+}
+
+body.dark-theme .lang-btn.active {
+  background: #f0f0f0;
+  color: #111;
+}
+
+/* Hero overlay — чуть темнее свет */
+body.dark-theme .hero .bg-blur {
+  filter: blur(25px) brightness(0.45);
+}
+body.dark-theme .hero .main {
+  filter: brightness(0.75);
+}
+body.dark-theme .hero .light {
+  background: radial-gradient(circle at 50% 70%, rgba(255,255,255,0.18), rgba(0,0,0,0.85) 70%);
+}
+
+/* Плавные переходы */
+body,
+body * {
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, filter 0.4s ease;
+}
+
+/* Исправление карточек в dark-theme */
+body.dark-theme .moment {
+  background: #1a1a1a;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .moment p {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Общие секции со светлым текстом */
+body.dark-theme .moodboard,
+body.dark-theme .daylife {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+/* Подписи под moodboard карточками */
+body.dark-theme .mood p {
+  background: #1a1a1a;
+  color: #f2f2f2;
+}
+
+/* QUOTE OF THE DAY */
+.quote {
+  text-align: center;
+  padding: 90px 20px 80px;
+  background: #fff;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+.quote blockquote {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.quote.visible blockquote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* Dark theme adaptation */
+body.dark-theme .quote {
+  background: #121212;
+  color: #eaeaea;
+}
+body.dark-theme .quote p {
+  color: #aaa;
+}
+
+/* ==== MOBILE ADAPTATION (vertical lang + theme stack) ==== */
+@media (max-width: 768px) {
+  .lang-switch {
+    top: 15px;
+    right: 15px;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 8px;
+    border-radius: 16px;
+    align-items: stretch;
+  }
+
+  .lang-btn, 
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .lang-btn.active {
+    background: #222;
+    color: #fff;
+  }
+
+  body.dark-theme .lang-switch {
+    background: rgba(25, 25, 25, 0.65);
+  }
+
+  body.dark-theme .lang-btn,
+  body.dark-theme #theme-toggle {
+    background: rgba(20, 20, 20, 0.8);
+    color: #eee;
+  }
+
+  body.dark-theme .lang-btn.active {
+    background: #f0f0f0;
+    color: #111;
   }
 }
