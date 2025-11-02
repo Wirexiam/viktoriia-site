@@ -531,3 +531,69 @@ body.dark-theme .quote p {
     color: #111;
   }
 }
+
+/* COLLAB SECTION */
+.collab {
+  text-align: center;
+  padding: 120px 20px 100px;
+  background: #fff;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.collab h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.collab p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+.collab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.collab .btn.primary {
+  background: #222;
+  color: #fff;
+}
+
+.collab .btn.outline {
+  background: transparent;
+  color: #222;
+  border: 1.5px solid #222;
+}
+
+.collab .btn.outline:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Dark theme */
+body.dark-theme .collab {
+  background: #121212;
+  color: #e8e8e8;
+}
+
+body.dark-theme .collab .btn.primary {
+  background: #f0f0f0;
+  color: #111;
+}
+
+body.dark-theme .collab .btn.outline {
+  border-color: #e8e8e8;
+  color: #e8e8e8;
+}
+
+body.dark-theme .collab .btn.outline:hover {
+  background: #e8e8e8;
+  color: #111;
+}

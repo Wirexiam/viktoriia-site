@@ -32,12 +32,15 @@
     "chip6": "🌇 Оранжевое небо",
     "chip7": "🎧 Музыка в наушниках",
     "chip8": "🪞 Счастливая я в зеркале",
-    "contact_title": "Контакты",
+    "contact_title": "Я в соцсетях",
     "connect_title": "Связаться",
     "footer_text": "Сделано со светом и спокойствием",
     "footer_copy": "© 2025 Viktoriia",
-    "quote_title": "Цитата дня"
-
+    "quote_title": "Цитата дня",
+    "collab_title": "Создадим что-то красивое вместе?",
+    "collab_text": "Я открыта к сотрудничеству с брендами, которые ценят свет, искренность и эстетику. Если вы хотите передать атмосферу вашего проекта через фото или видео — давайте обсудим идею.",
+    "collab_btn_email": "📩 Написать на почту",
+    "collab_btn_tg": "💬 Telegram"
   },
   "en": {
     "hero_subtitle": "visual creator from Saint Petersburg",
@@ -72,10 +75,14 @@
     "chip6": "🌇 Orange sky",
     "chip7": "🎧 Music in my headphones",
     "chip8": "🪞 Happy me in the mirror",
-    "contact_title": "Contacts",
+    "contact_title": "My social network",
     "connect_title": "Get in touch",
     "footer_text": "Made with calm & light",
     "footer_copy": "© 2025 Viktoriia",
-    "quote_title": "Quote of the Day"
+    "quote_title": "Quote of the Day",
+    "collab_title": "Let’s create something beautiful together",
+    "collab_text": "I’m open for collaborations with brands that value light, authenticity, and aesthetics. If you’d like to capture your project’s atmosphere through photo or video — let’s talk.",
+    "collab_btn_email": "📩 Email me",
+    "collab_btn_tg": "💬 Telegram"
   }
 }
